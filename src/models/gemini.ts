@@ -1,6 +1,10 @@
-import { ChatGoogleGenerativeAI } from "@langchain/google-genai";
 
-export const model = new ChatGoogleGenerativeAI({
-  model: "gemini-3.5-flash",
-  temperature: 0.2,
+import { ChatOpenAI } from "@langchain/openai";
+
+export const model = new ChatOpenAI({
+   model: "openrouter/free",
+  apiKey: process.env.OPENROUTER_API_KEY,
+  configuration: {
+    baseURL: "https://openrouter.ai/api/v1",
+  },
 });
