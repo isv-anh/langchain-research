@@ -5,7 +5,7 @@ import { app } from "./agent/graph.js";
 
 const result = await app.invoke({
   messages: [
-    new HumanMessage("Xin chào, thời tiết thành phố HCM thế nào"),
+    new HumanMessage("Lấy nhiệt độ của HCM hiện tại + thêm 2"),
   ],
 });
 
