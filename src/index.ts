@@ -8,12 +8,12 @@ await checkpointer.setup();
 
 const result = await app.invoke({
   messages: [
-    new HumanMessage("tôi sống ở đâu"),
+    new HumanMessage("Tôi tên là Hoàng Anh, 24 tuổi, sống ở Củ Chi."),
   ],
 }, {
   configurable: {
-    thread_id: "thread-1",
+    thread_id: "thread-4",
   }
 });
 
-console.log(result.messages);
+console.dir(result, { depth: null });

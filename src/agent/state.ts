@@ -1,5 +1,18 @@
-import { MessagesAnnotation } from "@langchain/langgraph";
+import {
+  Annotation,
+  MessagesAnnotation,
+} from "@langchain/langgraph";
 
-export const StateAnnotation = MessagesAnnotation;
+export const StateAnnotation = Annotation.Root({
+  ...MessagesAnnotation.spec,
 
-export type State = typeof MessagesAnnotation.State;
+  userName: Annotation<string>(),
+
+  age: Annotation<number>(),
+
+  city: Annotation<string>(),
+
+  job: Annotation<string>(),
+});
+
+export type State = typeof StateAnnotation.State;
